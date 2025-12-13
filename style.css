@@ -1,0 +1,170 @@
+/* PAGE BACKGROUND */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+
+  /* Outer background pattern */
+  background-image: url("Bankgroundcss.jpg");
+  background-repeat: repeat;
+}
+
+/* MAIN WHITE BOX */
+main > section {
+  max-width: 550px;
+  margin: 60px auto;
+  padding: 35px;
+  position: relative;
+
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden; /* important */
+}
+
+/* Background image layer */
+main > section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image: url("CenterBox.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  opacity: 0.35;   /* control strength here */
+  z-index: 0;
+}
+
+main > section > * {
+  position: relative;
+  z-index: 2;
+}
+
+.center-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 260px;
+  opacity: 0.33;        /* increase visibility */
+  pointer-events: none;
+  z-index: 1;
+}
+
+
+
+.converter-row section {
+  background: none;
+  padding: 0;
+}
+
+/* HEADER INSIDE THE BOX */
+header {
+  text-align: center;
+}
+
+/* Make the title define the visual width */
+header h1 {
+  font-family: 'Inter', sans-serif;
+  
+  font-weight: 800;
+  display: inline-block;
+}
+
+/* Make subtitle match the title width */
+header p {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+
+  max-width: 100%;
+  width: 100%;
+  margin: 8px auto 0;
+
+  text-align: center;
+}
+
+.header-text {
+  display: inline-block;
+}
+
+/* CENTER INPUT */
+.input-center {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.input-center input {
+  width: 70%;
+  padding: 8px;
+}
+
+/* FROM - BUTTON - TO ROW */
+.converter-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+
+select {
+  width: 140px;
+}
+
+/* ARROW IMAGE */
+.arrow img {
+  width: 40px;
+  height: auto;
+  opacity: 0.8;
+}
+
+/* CONVERT BUTTON BELOW */
+.convert-btn-below {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.convert-btn-below button {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+
+/* RESULT */
+.result-box {
+  text-align: center;
+  margin-top: 25px;
+  font-weight: bold;
+}
+
+output {
+  display: block;
+  margin-top: 10px;
+  font-size: 1.2em;
+}
+
+.result-box {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.result-box input {
+  width: 70%;
+  padding: 10px;
+  font-size: 1.1em;
+  text-align: center;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+}
+
+.arrow img {
+  width: 40px;
+  height: auto;
+  opacity: 0.85;      /* slightly softer */
+  display: block;     /* removes inline spacing quirks */
+}
